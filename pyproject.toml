@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "2024-fast-api-docker-tdd-postgresql"
+version = "0.1.0"
+description = ""
+authors = ["elza <elzaesimoes@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+sqlalchemy = "^2.0.28"
+psycopg2-binary = "^2.9.9"
+pytest = "^8.1.1"
+alembic = "^1.13.1"
+python-decouple = "^3.8"
+uvicorn = "^0.28.0"
+taskipy = "^1.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = "uvicorn app.main:app --reload --port 5000"
+
