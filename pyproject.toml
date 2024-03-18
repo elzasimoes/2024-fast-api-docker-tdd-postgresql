@@ -17,6 +17,11 @@ uvicorn = "^0.28.0"
 taskipy = "^1.12.2"
 isort = "^5.13.2"
 black = "^24.3.0"
+mkdocstrings-python = "^1.9.0"
+mkdocs-material = "^9.5.14"
+mkdocs-macros-plugin = "^1.0.5"
+mkdocstrings = "^0.24.1"
+mkdocs = "^1.5.3"
 
 
 [build-system]

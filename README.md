@@ -3,9 +3,7 @@
 
 poetry init
 
-poetry shell - env
+poetry shell
 
-python-decouple = "^3.8"
+poetry add packages
 
-poetry add fastapi sqlalchemy
-add psycopg2-binary pytest alembic python-decouple

@@ -1,0 +1,16 @@
+site_name: Fast API - 2024
+repo_url: https://github.com/elzasimoes/2024-fast-api-docker-tdd-postgresql
+repo_name: elzasimoes/2024-fast-api-docker-tdd-postgresql
+
+theme:
+  name: "material"
+  language: pt-BR
+
+watch:
+   - app
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [app]
