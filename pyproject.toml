@@ -22,6 +22,7 @@ mkdocs-material = "^9.5.14"
 mkdocs-macros-plugin = "^1.0.5"
 mkdocstrings = "^0.24.1"
 mkdocs = "^1.5.3"
+httpx = "^0.27.0"
 
 
 [build-system]
@@ -30,4 +31,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 run = "uvicorn app.main:app --reload --port 5000"
+lint = "black . && isort  ."
+test = "docker-compose run app sh -c pytest -k ."
+build = "docker-compose build"
+up = "docker-compose up -d"
 

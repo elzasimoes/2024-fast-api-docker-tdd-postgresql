@@ -7,3 +7,5 @@ poetry shell
 
 poetry add packages
 
+docker-compose build
+
