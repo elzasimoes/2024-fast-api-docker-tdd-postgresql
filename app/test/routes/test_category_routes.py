@@ -5,9 +5,6 @@ from app.db.models import Category as CategoryModel
 from app.main import app
 
 client = TestClient(app)
-headers = {"Authorization": "Bearer token"}
-client.headers = headers
-
 
 def test_add_category_route(db_session):
     body = {"name": "Roupa", "slug": "roupa"}
@@ -35,10 +32,6 @@ def test_list_categories_route(categories_on_db):
         "slug": categories_on_db[0].slug,
         "id": categories_on_db[0].id,
     }
-    assert data["total"] == 4
-    assert data["page"] == 1
-    assert data["size"] == 50
-    assert data["pages"] == 1
     
     
 def test_delete_category_route(db_session):

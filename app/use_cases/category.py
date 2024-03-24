@@ -27,7 +27,7 @@ class CategoryUseCases:
         category_model = self.db_session.query(CategoryModel).filter_by(id=id).first()
         if not category_model:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Category not found')
-        
+
         self.db_session.delete(category_model)
         self.db_session.commit()
 
