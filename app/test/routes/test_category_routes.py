@@ -25,12 +25,11 @@ def test_list_categories_route(categories_on_db):
     assert response.status_code == status.HTTP_200_OK
     data = response.json()
 
-    assert "items" in data
-    assert len(data["items"]) == 4
-    assert data["items"][0] == {
+    assert len(data) == 4
+    assert data[0] == {
         "name": categories_on_db[0].name,
         "slug": categories_on_db[0].slug,
-        "id": categories_on_db[0].id,
+        "id": categories_on_db[0].id
     }
     
     

@@ -18,10 +18,10 @@ def db_session():
 @pytest.fixture()
 def categories_on_db(db_session):
     categories = [
-        CategoryModels(name="Roupa", slug="roupa"),
-        CategoryModels(name="Janela", slug="janela"),
-        CategoryModels(name="Chocolate", slug="chocolate"),
-        CategoryModels(name="Itens de banheiro", slug="itens"),
+        CategoryModels(name='Roupa', slug='roupa'),
+        CategoryModels(name='Carro', slug='carro'),
+        CategoryModels(name='Itens de cozinha', slug='itens-de-cozinha'),
+        CategoryModels(name='Decoracao', slug='decoracao'),
     ]
 
     for category in categories:
